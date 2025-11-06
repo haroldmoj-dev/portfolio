@@ -9,3 +9,7 @@ html {
 h1, h2 {
   @apply font-heading;
 }
+
+body {
+  @apply bg-background;
+}
