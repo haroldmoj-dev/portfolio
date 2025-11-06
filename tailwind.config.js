@@ -12,6 +12,10 @@ module.exports = {
         background: "#121212",
         text: "#B3B3B3",
       },
+      fontFamily: {
+        sans: ['Open Sans'],
+        heading: ['Google Sans Code'], // optional custom key
+      },
     },
   },
   plugins: [],
