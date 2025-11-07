@@ -10,7 +10,7 @@ export default function Navbar() {
       }`}
     >
       <div className="relative p-4 md:px-6 lg:px-8 max-w-5xl mx-auto flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold italic text-primary">
+        <a href="#home" className="text-lg font-bold text-primary">
           Harold <span className="text-secondary">Mojica</span>
         </a>
         <button

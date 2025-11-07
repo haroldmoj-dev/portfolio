@@ -15,8 +15,8 @@ export default function Banner() {
     >
       <div className="px-4 py-12 md:px-6 lg:px-8 mx-auto max-w-5xl flex flex-col lg:flex-row gap-8 items-center text-center lg:text-left">
         <div className="max-w-xl lg:max-w-full">
-          <h1 className="text-5xl font-sans font-bold text-secondary mb-6">
-            <span className="text-primary">Harold</span>, at your service!
+          <h1 className="text-4xl md:text-5xl font-sans font-bold text-secondary mb-6">
+            <span className="text-primary">Harold</span> at your service!
           </h1>
           <p className="text-lg text-text mb-6">
             A Computer Science undergraduate with a passion for bringing ideas to life. I aspire to become a professional programmer where creativity is the only limit!

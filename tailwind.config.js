@@ -13,8 +13,9 @@ module.exports = {
         text: "#B3B3B3",
       },
       fontFamily: {
-        sans: ['Open Sans'],
-        heading: ['Google Sans Code'],
+        sans: ["Nunito", "sans-serif"],
+        heading: ["Google Sans Code", "sans-serif"],
+        rough: ["Open Sans", "sans-serif"],
       },
     },
   },
