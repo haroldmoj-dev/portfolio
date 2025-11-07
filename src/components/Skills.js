@@ -15,8 +15,8 @@ export default function Skills() {
           <button
             className={`flex-1 py-2 text-center font-medium transition-colors ${
               activeTab === "frontend"
-                ? "bg-primary text-background"
-                : "bg-background text-text hover:bg-gray-100"
+                ? "bg-secondary text-background text-bold"
+                : "bg-background text-text text-bold hover:bg-gray-100"
             }`}
             onClick={() => setActiveTab("frontend")}
           >
@@ -25,8 +25,8 @@ export default function Skills() {
           <button
             className={`flex-1 py-2 text-center font-medium transition-colors ${
               activeTab === "backend"
-                ? "bg-primary text-background"
-                : "bg-background text-text hover:bg-gray-100"
+                ? "bg-secondary text-background text-bold"
+                : "bg-background text-text text-bold hover:bg-gray-100"
             }`}
             onClick={() => setActiveTab("backend")}
           >
