@@ -13,9 +13,7 @@ module.exports = {
         text: "#B3B3B3",
       },
       fontFamily: {
-        sans: ["Nunito", "sans-serif"],
-        heading: ["Google Sans Code", "sans-serif"],
-        rough: ["Open Sans", "sans-serif"],
+        sans: ['"Nunito"', 'Arial', 'sans-serif'],
       },
     },
   },
