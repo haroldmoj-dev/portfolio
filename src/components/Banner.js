@@ -18,7 +18,7 @@ export default function Banner() {
   }, []);
 
   const Typing = ({ words }) => (
-    <span className="text-primary font-bold">
+    <span className="text-primary font-bold block md:inline">
       <Typewriter
         words={words}
         loop={true}
@@ -39,7 +39,7 @@ export default function Banner() {
       <div className="px-6 py-12 lg:px-8 mx-auto max-w-5xl flex flex-col lg:flex-row gap-8 items-center text-center lg:text-left">
         <div className="max-w-xl lg:max-w-full">
           <h1 className="text-4xl md:text-5xl font-sans font-bold text-secondary mb-6">
-            <Typing words={['Harold', 'Mojica']} /> at your service!
+            <Typing words={['Harold', 'Mojica']}/> at your service!
           </h1>
           <p className="text-lg text-text mb-6">
             A Computer Science undergraduate with a passion for bringing ideas to life. I aspire to become a professional programmer where creativity is the only limit!
