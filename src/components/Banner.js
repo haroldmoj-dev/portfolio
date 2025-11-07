@@ -1,37 +1,55 @@
-import HaroldImg from "../assets/harold_img.png";
-import HaroldImg2 from "../assets/harold_img2.png"; 
+import HaroldImg from "../assets/harold-informal-img.png";
+import HaroldImg2 from "../assets/harold-formal-img.png"; 
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { HiDownload } from "react-icons/hi";
 import { useState } from "react";
 
 export default function Banner() {
-  const [hover, setHover] = useState(false);
+  const [click, setClick] = useState(false);
   
   return (
     <section
       id="home"
       className="min-h-screen flex items-center bg-background"
     >
-      <div className="relative z-10 px-4 md:px-6 lg:px-8 max-w-5xl mx-auto flex flex-col md:flex-row items-center text-center md:text-left">
-        <div className="md:w-1/2">
-          <h1 className="text-5xl font-sans font-bold text-secondary mb-4">
-            Hi, I’m <span className="text-primary">Harold</span>!
+      <div className="px-4 md:px-6 lg:px-8 mx-auto max-w-5xl flex flex-col lg:flex-row gap-8 items-center text-center lg:text-left">
+        <div className="max-w-xl lg:max-w-full">
+          <h1 className="text-5xl font-sans font-bold text-secondary mb-6">
+            <span className="text-primary">Harold</span>, at your service!
           </h1>
-          <p className="text-lg text-text max-w-xl mb-6">
-              I’m a Computer Science undergraduate student.
+          <p className="text-lg text-text mb-6">
+            A Computer Science undergraduate with a passion for bringing ideas to life. I aspire to become a professional programmer where creativity is the only limit!
           </p>
-          <a
-              href="#projects"
-              className="mt-4 px-6 py-3 bg-background text-primary rounded-full font-medium border-2 border-primary hover:bg-primary hover:text-secondary transition"
-          >
-              View My Projects
-          </a>
+          <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
+            <a
+                href="#projects"
+                className="px-6 py-3 bg-background text-primary rounded-full font-medium border-2 border-primary hover:bg-primary hover:text-secondary transition  inline-flex items-center gap-2"
+            >
+                <HiDownload className="h-6 w-auto"/> Resume
+            </a>
+            <div className="flex gap-6 items-center">
+              <a href="https://github.com/haroldmoj-dev" target="_blank" rel="noopener noreferrer">
+                <FaGithub className="w-auto h-8 text-text hover:text-secondary transition" />
+              </a>
+              <a href="https://www.linkedin.com/in/harold-mojica" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="w-auto h-8 text-text hover:text-secondary transition" />
+              </a>
+              <a href="https://www.facebook.com/harold.mojica.1" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="w-auto h-8 text-text hover:text-secondary transition" />
+              </a>
+              <a href="mailto:haroldmojica.dev@gmail.com">
+                <HiOutlineMail className="w-auto h-10 text-text hover:text-secondary transition" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center md:justify-end">
+        <div className="flex-shrink-0">
           <img
-            src={hover ? HaroldImg2 : HaroldImg}
+            src={click ? HaroldImg2 : HaroldImg}
             alt="Harold"
-            className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg bg-accent border-2 border-primary transition hover:border-secondary"
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+            className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg bg-accent border-2 border-primary hover:border-secondary"
+            onClick={() => setClick(!click)}
           />
         </div>
       </div>

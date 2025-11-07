@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Open Sans'],
-        heading: ['Google Sans Code'], // optional custom key
+        heading: ['Google Sans Code'],
       },
     },
   },
