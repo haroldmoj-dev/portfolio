@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 backdrop-blur-md ${
         open ? "bg-background" : "bg-background/80"
-      } shadow-[0_3px_6px_#1DB954]`}
+      } shadow-[0_1px_14px_#1DB954]`}
     >
       <div className="relative z-10 md:px-4 lg:px-6 max-w-5xl mx-auto flex justify-between items-center p-4">
         <a href="#home" className="text-2xl font-bold italic text-primary">

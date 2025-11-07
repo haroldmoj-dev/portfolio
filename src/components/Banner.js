@@ -27,12 +27,11 @@ export default function Banner() {
         </div>
         <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center md:justify-end">
           <img
-              src={hover ? HaroldImg2 : HaroldImg}
-              alt="Harold"
-              className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg bg-accent border-2 border-primary transition hover:border-secondary"
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
-              onClick={() => setHover(false)}
+            src={hover ? HaroldImg2 : HaroldImg}
+            alt="Harold"
+            className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg bg-accent border-2 border-primary transition hover:border-secondary"
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
           />
         </div>
       </div>
