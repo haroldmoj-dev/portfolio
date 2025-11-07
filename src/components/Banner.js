@@ -11,9 +11,9 @@ export default function Banner() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-background"
+      className="min-h-screen flex items-center bg-background pt-16"
     >
-      <div className="px-4 md:px-6 lg:px-8 mx-auto max-w-5xl flex flex-col lg:flex-row gap-8 items-center text-center lg:text-left">
+      <div className="px-4 py-12 md:px-6 lg:px-8 mx-auto max-w-5xl flex flex-col lg:flex-row gap-8 items-center text-center lg:text-left">
         <div className="max-w-xl lg:max-w-full">
           <h1 className="text-5xl font-sans font-bold text-secondary mb-6">
             <span className="text-primary">Harold</span>, at your service!
