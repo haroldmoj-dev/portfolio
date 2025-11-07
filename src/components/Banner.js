@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiDownload } from "react-icons/hi";
 import { useEffect, useState } from "react";
+import { Typewriter } from 'react-simple-typewriter';
 import HaroldImg from "../assets/harold-informal-img.png";
 import HaroldImg2 from "../assets/harold-formal-img.png"; 
 
@@ -16,15 +17,29 @@ export default function Banner() {
     });
   }, []);
 
+  const Typing = ({ words }) => (
+    <span className="text-primary font-bold">
+      <Typewriter
+        words={words}
+        loop={true}
+        cursor
+        cursorStyle="|"
+        typeSpeed={120}
+        deleteSpeed={80}
+        delaySpeed={2000}
+      />
+    </span>
+  );
+
   return (
     <section
       id="home"
       className="min-h-screen flex items-center bg-background pt-16"
     >
-      <div className="px-4 py-12 md:px-6 lg:px-8 mx-auto max-w-5xl flex flex-col lg:flex-row gap-8 items-center text-center lg:text-left">
+      <div className="px-6 py-12 lg:px-8 mx-auto max-w-5xl flex flex-col lg:flex-row gap-8 items-center text-center lg:text-left">
         <div className="max-w-xl lg:max-w-full">
           <h1 className="text-4xl md:text-5xl font-sans font-bold text-secondary mb-6">
-            <span className="text-primary">Harold</span> at your service!
+            <Typing words={['Harold', 'Mojica']} /> at your service!
           </h1>
           <p className="text-lg text-text mb-6">
             A Computer Science undergraduate with a passion for bringing ideas to life. I aspire to become a professional programmer where creativity is the only limit!
@@ -56,7 +71,7 @@ export default function Banner() {
           <img
             src={click ? HaroldImg2 : HaroldImg}
             alt="Harold"
-            className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg bg-accent border-2 border-primary hover:border-secondary"
+            className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg bg-accent border-2 border-primary hover:border-secondary cursor-pointer"
             onClick={() => setClick(!click)}
           />
         </div>
