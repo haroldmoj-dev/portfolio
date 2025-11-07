@@ -1,13 +1,21 @@
-import HaroldImg from "../assets/harold-informal-img.png";
-import HaroldImg2 from "../assets/harold-formal-img.png"; 
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiDownload } from "react-icons/hi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import HaroldImg from "../assets/harold-informal-img.png";
+import HaroldImg2 from "../assets/harold-formal-img.png"; 
 
 export default function Banner() {
   const [click, setClick] = useState(false);
   
+  useEffect(() => {
+    const preload = [HaroldImg, HaroldImg2];
+    preload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <section
       id="home"
