@@ -1,5 +1,4 @@
-export default function About() {
-  const Highlight = ({ children }) => (
+const Highlight = ({ children }) => (
     <span className="
       text-secondary 
       md:inline-block 
@@ -13,6 +12,8 @@ export default function About() {
       {children}
     </span>
   );
+
+export default function About() {
   
   return (
     <section

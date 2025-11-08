@@ -6,6 +6,20 @@ import { Typewriter } from 'react-simple-typewriter';
 import HaroldImg from "../assets/harold-informal-img.png";
 import HaroldImg2 from "../assets/harold-formal-img.png"; 
 
+const Typing = ({ words }) => (
+  <span className="text-primary font-bold block md:inline">
+    <Typewriter
+      words={words}
+      loop={true}
+      cursor
+      cursorStyle="|"
+      typeSpeed={120}
+      deleteSpeed={80}
+      delaySpeed={2000}
+    />
+  </span>
+);
+
 export default function Banner() {
   const [click, setClick] = useState(false);
   
@@ -16,20 +30,6 @@ export default function Banner() {
       img.src = src;
     });
   }, []);
-
-  const Typing = ({ words }) => (
-    <span className="text-primary font-bold block md:inline">
-      <Typewriter
-        words={words}
-        loop={true}
-        cursor
-        cursorStyle="|"
-        typeSpeed={120}
-        deleteSpeed={80}
-        delaySpeed={2000}
-      />
-    </span>
-  );
 
   return (
     <section
