@@ -1,43 +1,60 @@
+import TaeImg from "../assets/projects/tae.png";
+import FpImg from "../assets/projects/fp.png";
+import FarmImg from "../assets/projects/farm.png";
+import SpringImg from "../assets/projects/spring.png";
+import OpenchanImg from "../assets/projects/openchan.png";
+import UnirideImg from "../assets/projects/uniride.png";
+import JpdImg from "../assets/projects/jpd.png";
+import CityImg from "../assets/projects/city.png";
+
 const projects = [
   {
-    title: "OpenChan",
-    description: "Web application demonstrating role-based access control system",
-    link: "https://github.com/haroldmoj-dev/dlsu-secure-web-dev",
+    title: "CityShadows",
+    description: "Routing tool recommending shaded walking paths",
+    link: "https://github.com/haroldmoj-dev/dlsu-cityshadows",
+    image: CityImg,
   },
   {
     title: "UniRide",
     description: "Carpooling mobile application made for students",
     link: "https://github.com/haroldmoj-dev/dlsu-mobile-carpooling",
+    image: UnirideImg,
   },
   {
     title: "JPDGarage",
     description: "Online management system for motorcycle parts",
     link: "https://github.com/haroldmoj-dev/dlsu-jpdgarage",
-  },
-  {
-    title: "CityShadows",
-    description: "Routing tool recommending shaded walking paths",
-    link: "https://github.com/haroldmoj-dev/dlsu-cityshadows",
-  },
-  {
-    title: "Floating Point Converter",
-    description: "Web application implementing Decimal32 floating point conversion",
-    link: "https://github.com/haroldmoj-dev/dlsu-decimal32-fp-converter",
-  },
-  {
-    title: "TAE",
-    description: "2D pixel game designed for 1–2 players (local multiplayer)",
-    link: "https://github.com/haroldmoj-dev/gamemaker-game1",
+    image: JpdImg,
   },
   {
     title: "SpringTales",
     description: "Website storing infographics made for Guardian Tales",
     link: "https://github.com/haroldmoj-dev/gt-central",
+    image: SpringImg,
+  },
+  {
+    title: "OpenChan",
+    description: "Web application demonstrating role-based access control system",
+    link: "https://github.com/haroldmoj-dev/dlsu-secure-web-dev",
+    image: OpenchanImg,
+  },
+  {
+    title: "TAE",
+    description: "2D pixel game designed for 1–2 players (local multiplayer)",
+    link: "https://github.com/haroldmoj-dev/gamemaker-game1",
+    image: TaeImg,
+  },
+  {
+    title: "Floating Point Converter",
+    description: "Web application implementing Decimal32 floating point conversion",
+    link: "https://github.com/haroldmoj-dev/dlsu-decimal32-fp-converter",
+    image: FpImg,
   },
   {
     title: "MyFarm",
     description: "Farming game showcasing object-oriented programming",
     link: "https://github.com/haroldmoj-dev/dlsu-myfarm",
+    image: FarmImg,
   },
 ];
 
@@ -50,22 +67,28 @@ export default function Projects() {
       <h2 className="text-4xl text-primary mb-6">Projects</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full">
         {projects.map((proj) => (
-          <div
-            key={proj.title}
-            className="p-6 rounded-lg shadow-md bg-accent hover:shadow-lg transition"
-          >
-            <h3 className="text-2xl font-semibold text-secondary mb-2">
-              {proj.title}
-            </h3>
-            <p className="text-text mb-4">{proj.description}</p>
-            <a
-              href={proj.link}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary font-medium hover:underline"
+          <div className="rounded-lg bg-accent transition relative overflow-hidden">
+            <div
+              className="min-h-60 flex flex-col"
+              style={{
+                backgroundImage: proj.image ? `url(${proj.image})` : 'none',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >           
+               <div className="absolute inset-0 bg-black bg-opacity-20 z-0"></div>
+            </div>
+            <div 
+              key={proj.title}
+              className="relative z-10 min-h-20 bg-accent"
             >
-              View project →
-            </a>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-secondary mb-2">
+                  {proj.title}
+                </h3>
+                <p className="text-text">{proj.description}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
