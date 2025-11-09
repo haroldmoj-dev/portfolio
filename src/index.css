@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 html {
@@ -16,6 +16,10 @@ h1, h2 {
 
 body {
   @apply bg-background;
+}
+
+.glow-effect {
+  filter: drop-shadow(0 0 8px rgba(29,185,84,0.8)) drop-shadow(0 0 16px rgba(29,185,84,0.5));
 }
 
 @font-face {
