@@ -68,7 +68,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="scroll-mt-24 flex flex-col justify-center items-start px-6 lg:px-8 bg-background text-text max-w-4xl mx-auto py-16"
+      className="scroll-mt-24 flex flex-col justify-center items-start px-6 lg:px-8 bg-background text-text max-w-5xl mx-auto py-16"
     >
       <h2 className="text-4xl text-primary mb-6">Skills</h2>
 
