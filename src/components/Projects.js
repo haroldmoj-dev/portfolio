@@ -6,6 +6,7 @@ import OpenchanImg from "../assets/projects/openchan.png";
 import UnirideImg from "../assets/projects/uniride.png";
 import JpdImg from "../assets/projects/jpd.png";
 import CityImg from "../assets/projects/city.png";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
@@ -64,19 +65,27 @@ export default function Projects() {
       id="projects" 
       className="scroll-mt-24 flex flex-col items-start px-6 lg:px-8 bg-background text-text max-w-5xl mx-auto py-16"
     >
-      <h2 className="text-4xl text-primary mb-6">Projects</h2>
+      <h2 className="text-4xl text-primary mb-8">Projects</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full">
         {projects.map((proj) => (
-          <div className="rounded-lg bg-accent transition relative overflow-hidden">
+          <div className="rounded-lg bg-accent transition relative overflow-hidden border-2 border-transparent hover:border-text hover:-translate-y-4">
             <div
               className="min-h-60 flex flex-col"
               style={{
                 backgroundImage: proj.image ? `url(${proj.image})` : 'none',
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundPosition: 'top',
               }}
             >           
-               <div className="absolute inset-0 bg-black bg-opacity-20 z-0"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-20 z-0"></div>
+              <a 
+                href={proj.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-3 right-3 z-20 text-white bg-black bg-opacity-50 hover:bg-opacity-80 rounded-full p-2 transition"
+              >
+                <FaGithub className="w-5 h-5" />
+              </a>
             </div>
             <div 
               key={proj.title}
