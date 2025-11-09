@@ -17,9 +17,9 @@ const skillCategories = [
   {
     category: "Web Dev",
     skills: [
-      { name: "React.js", icon: <FaReact /> },
+      { name: "React", icon: <FaReact /> },
       { name: "Node.js", icon: <FaNodeJs /> },
-      { name: "Express.js", icon: <SiExpress /> },
+      { name: "Express", icon: <SiExpress /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     ],
   },

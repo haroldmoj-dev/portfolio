@@ -14,48 +14,56 @@ const projects = [
     description: "Routing tool recommending shaded walking paths",
     link: "https://github.com/haroldmoj-dev/dlsu-cityshadows",
     image: CityImg,
+    stack: ["Python", "PyTorch", "OpenCV", "GeoPandas"],
   },
   {
     title: "UniRide",
     description: "Carpooling mobile application made for students",
     link: "https://github.com/haroldmoj-dev/dlsu-mobile-carpooling",
     image: UnirideImg,
+    stack: ["Android Studio", "Java", "XML", "Firebase"],
   },
   {
     title: "JPDGarage",
     description: "Online management system for motorcycle parts",
     link: "https://github.com/haroldmoj-dev/dlsu-jpdgarage",
     image: JpdImg,
+    stack: ["React", "Node.js", "Express", "MongoDB"],
   },
   {
     title: "SpringTales",
     description: "Website storing infographics made for Guardian Tales",
     link: "https://github.com/haroldmoj-dev/gt-central",
     image: SpringImg,
+    stack: ["HTML/CSS"],
   },
   {
     title: "OpenChan",
     description: "Web application demonstrating role-based access control system",
     link: "https://github.com/haroldmoj-dev/dlsu-secure-web-dev",
     image: OpenchanImg,
+    stack: ["Node.js", "Express", "SQLite", "HTML/CSS", "Tailwind CSS"],
   },
   {
     title: "TAE",
     description: "2D pixel game designed for 1–2 players (local multiplayer)",
     link: "https://github.com/haroldmoj-dev/gamemaker-game1",
     image: TaeImg,
+    stack: ["GameMaker Language"],
   },
   {
     title: "Floating Point Converter",
     description: "Web application implementing Decimal32 floating point conversion",
     link: "https://github.com/haroldmoj-dev/dlsu-decimal32-fp-converter",
     image: FpImg,
+    stack: ["Python", "Panel"],
   },
   {
     title: "MyFarm",
     description: "Farming game showcasing object-oriented programming",
     link: "https://github.com/haroldmoj-dev/dlsu-myfarm",
     image: FarmImg,
+    stack: ["Java", "Swing"],
   },
 ];
 
@@ -86,6 +94,16 @@ export default function Projects() {
               >
                 <FaGithub className="w-5 h-5" />
               </a>
+              <div className="absolute bottom-3 left-3 z-20 flex flex-wrap gap-1 max-w-[calc(100%-1.5rem)]">
+                {proj.stack.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="text-xs px-2 py-1 bg-black bg-opacity-70 text-secondary rounded-md border-2 border-primary font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
             <div 
               key={proj.title}
