@@ -68,12 +68,20 @@ export default function Banner() {
           </div>
         </div>
         <div className="flex-shrink-0">
-          <img
-            src={click ? HaroldImg2 : HaroldImg}
-            alt="Harold"
-            className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg bg-accent border-2 border-primary hover:border-secondary cursor-pointer"
-            onClick={() => setClick(!click)}
-          />
+          <div className="flex-shrink-0">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 cursor-pointer rounded-full border-2 border-primary hover:border-secondary transition-colors" onClick={() => setClick(!click)}>
+              <img
+                src={HaroldImg}
+                alt="Harold"
+                className={`absolute inset-0 w-full h-full object-cover rounded-full shadow-lg bg-accent transition-opacity duration-300 ${click ? 'opacity-0' : 'opacity-100'}`}
+              />
+              <img
+                src={HaroldImg2}
+                alt="Harold"
+                className={`absolute inset-0 w-full h-full object-cover rounded-full shadow-lg bg-accent transition-opacity duration-300 ${click ? 'opacity-100' : 'opacity-0'}`}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

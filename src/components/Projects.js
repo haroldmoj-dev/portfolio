@@ -66,17 +66,17 @@ export default function Projects() {
       className="scroll-mt-24 flex flex-col items-start px-6 lg:px-8 bg-background text-text max-w-5xl mx-auto py-16"
     >
       <h2 className="text-4xl text-primary mb-8">Projects</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full">
         {projects.map((proj) => (
-          <div className="rounded-lg bg-accent transition relative overflow-hidden border-2 border-transparent hover:border-text hover:-translate-y-4">
+          <div className="rounded-lg bg-accent transition relative overflow-hidden border-2 border-transparent hover:border-text hover:-translate-y-4 flex flex-col">
             <div
-              className="min-h-60 flex flex-col"
+              className="min-h-60 flex flex-col relative"
               style={{
                 backgroundImage: proj.image ? `url(${proj.image})` : 'none',
                 backgroundSize: 'cover',
                 backgroundPosition: 'top',
               }}
-            >           
+            >
               <div className="absolute inset-0 bg-black bg-opacity-20 z-0"></div>
               <a 
                 href={proj.link}
@@ -89,7 +89,7 @@ export default function Projects() {
             </div>
             <div 
               key={proj.title}
-              className="relative z-10 min-h-20 bg-accent"
+              className="relative z-10 bg-accent flex-grow"
             >
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-secondary mb-2">
