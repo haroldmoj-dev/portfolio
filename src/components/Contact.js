@@ -7,7 +7,7 @@ export default function Contact() {
       className="scroll-mt-24"
     >
       <div className="flex flex-col justify-center items-center px-4 md:px-6 lg:px-8 bg-gradient-to-b from-background to-primary/10 text-text max-w-full mx-auto py-16">
-        <h2 className="text-4xl text-primary mb-6">Contact Me</h2>
+        <h2 className="text-4xl text-primary mb-6 text-center">Contact Me</h2>
         <p className="text-lg text-center mb-8 max-w-xl">
           Feel free to reach out for any inquiries!
         </p>
