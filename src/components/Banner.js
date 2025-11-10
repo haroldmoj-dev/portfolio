@@ -3,6 +3,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { HiDownload } from "react-icons/hi";
 import { useEffect, useState } from "react";
 import { Typewriter } from 'react-simple-typewriter';
+import ResumePdf from "../assets/resume-harold-mojica.pdf";
 import HaroldImg from "../assets/harold-informal-img.png";
 import HaroldImg2 from "../assets/harold-formal-img.png"; 
 
@@ -46,8 +47,9 @@ export default function Banner() {
           </p>
           <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
             <a
-                href="#projects"
-                className="px-6 py-3 bg-background text-primary rounded-full font-medium border-2 border-primary hover:bg-primary hover:text-secondary transition  inline-flex items-center gap-2"
+              href={ResumePdf}
+              download="resume-harold-mojica.pdf"
+              className="px-6 py-3 bg-background text-primary rounded-full font-medium border-2 border-primary hover:bg-primary hover:text-secondary transition  inline-flex items-center gap-2"
             >
                 <HiDownload className="h-6 w-auto"/> Resume
             </a>
