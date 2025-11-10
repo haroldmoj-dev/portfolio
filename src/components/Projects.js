@@ -45,7 +45,7 @@ const projects = [
     stack: ["Node.js", "Express", "SQLite", "HTML/CSS", "Tailwind CSS"],
   },
   {
-    title: "TAE",
+    title: "Project T",
     description: "2D pixel game designed for 1–2 players (local multiplayer)",
     link: "https://github.com/haroldmoj-dev/gamemaker-game1",
     image: TaeImg,

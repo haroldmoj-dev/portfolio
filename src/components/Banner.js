@@ -4,8 +4,8 @@ import { HiDownload } from "react-icons/hi";
 import { useEffect, useState } from "react";
 import { Typewriter } from 'react-simple-typewriter';
 import ResumePdf from "../assets/resume-harold-mojica.pdf";
-import HaroldImg from "../assets/harold-informal-img.png";
-import HaroldImg2 from "../assets/harold-formal-img.png"; 
+import HaroldImg from "../assets/harold-formal-img.png"; 
+import HaroldImg2 from "../assets/harold-informal-img.png";
 
 const Typing = ({ words }) => (
   <span className="text-primary font-bold block md:inline">
