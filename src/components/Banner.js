@@ -69,21 +69,20 @@ export default function Banner() {
             </div>
           </div>
         </div>
-        <div className="flex-shrink-0">
-          <div className="flex-shrink-0">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 cursor-pointer rounded-full border-2 border-primary hover:border-secondary transition-colors" onClick={() => setClick(!click)}>
-              <img
-                src={HaroldImg}
-                alt="Harold"
-                className={`absolute inset-0 w-full h-full object-cover rounded-full shadow-lg bg-accent transition-opacity duration-300 ${click ? 'opacity-0' : 'opacity-100'}`}
-              />
-              <img
-                src={HaroldImg2}
-                alt="Harold"
-                className={`absolute inset-0 w-full h-full object-cover rounded-full shadow-lg bg-accent transition-opacity duration-300 ${click ? 'opacity-100' : 'opacity-0'}`}
-              />
-            </div>
+        <div className="relative flex-shrink-0">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 cursor-pointer rounded-full border-2 border-primary hover:border-secondary transition-colors" onClick={() => setClick(!click)}>
+            <img
+              src={HaroldImg}
+              alt="Harold"
+              className={`absolute inset-0 w-full h-full object-cover rounded-full shadow-lg bg-accent transition-opacity duration-300 ${click ? 'opacity-0' : 'opacity-100'}`}
+            />
+            <img
+              src={HaroldImg2}
+              alt="Harold"
+              className={`absolute inset-0 w-full h-full object-cover rounded-full shadow-lg bg-accent transition-opacity duration-300 ${click ? 'opacity-100' : 'opacity-0'}`}
+            />
           </div>
+          <p className="absolute text-xs md:text-sm top-5 -right-2 md:top-6 md:-right-1 font-bold text-sm text-primary text-center rotate-45">&darr; Click Me! &darr;</p>
         </div>
       </div>
     </section>
