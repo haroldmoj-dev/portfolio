@@ -82,7 +82,7 @@ export default function Banner() {
               className={`absolute inset-0 w-full h-full object-cover rounded-full shadow-lg bg-accent transition-opacity duration-300 ${click ? 'opacity-100' : 'opacity-0'}`}
             />
           </div>
-          <p className="absolute text-xs md:text-sm top-5 -right-2 md:top-6 md:-right-1 font-bold text-sm text-primary text-center rotate-45">&darr; Click Me! &darr;</p>
+          <p className="absolute text-xs md:text-sm top-5 -right-2 md:top-6 md:-right-1 font-bold text-sm text-primary text-center rotate-45">&darr; CLICK ME &darr;</p>
         </div>
       </div>
     </section>
